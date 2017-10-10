@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>MIND: Memorizing is not difficult</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+	var myMixin = {
+		created: function(){
+			this.hello();
+		},
+		methods: {
+			hello: function() {
+				console.log('Hello from mixin!');
+			}
+		}
+	};
+
+	var Component = Vue.extend({
+		mixins: [myMixin]
+	});
+
+	var component = new Component();
+
+	var Map = {
+		created
+	};
+</script>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+#map {
+	width: 100%;
+	height: 100%;
+	background-image: url('./image/got.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+</body>
+</html>
